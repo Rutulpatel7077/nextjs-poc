@@ -10,12 +10,17 @@ const Home: NextPage = ({ site }: any) => {
 
 export async function getStaticPaths({ ...args }: any) {
   return {
-    paths: [{ params: { site: "localhost" } }],
+    paths: [
+      { params: { site: "localhost" } },
+      { params: { site: "nextjs-poc-zeta.vercel.app" } },
+    ],
     fallback: true,
   };
 }
 
 export async function getStaticProps({ params: { site } }: any) {
+  console.log(site, "site");
+
   return {
     props: {
       site,
