@@ -8,7 +8,7 @@ const Home: NextPage = ({ site }: any) => {
   );
 };
 
-export async function getServerSideProps({ params: { site } }: any) {
+export async function getInitialProps({ params: { site } }: any) {
   console.log(site, "site");
 
   return {
