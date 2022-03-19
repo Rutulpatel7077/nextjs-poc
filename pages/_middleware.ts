@@ -15,7 +15,7 @@ export default function middleware(req: NextRequest) {
   // the pages/sites folder and its respective contents. This can also be done
   // via rewrites to a custom 404 page
   if (url.pathname.startsWith(`/_sites`)) {
-    return new Response(null, { status: 404 })
+    return new Response(null, { status: 400 })
   }
 
   if (
