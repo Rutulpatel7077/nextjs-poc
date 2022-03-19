@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-const Home: NextPage = () => {
+const Strange: NextPage = () => {
   return (
     <div >
       <h1>Strange Page</h1>
@@ -7,4 +7,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Strange;
