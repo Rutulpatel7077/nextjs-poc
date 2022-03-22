@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
-const About: NextPage = ({ site }: any) => {
+const About: NextPage = ({ site, time }: any) => {
   return (
     <div >
       <h1>About {site} Page</h1>
+      <p>Time: {time}</p>
     </div>
   );
 };
@@ -18,6 +19,7 @@ export async function getStaticProps({ params: { site } }: any) {
   return {
     props: {
       site,
+      time: Date.now(),
     },
     revalidate: 5,
   };
