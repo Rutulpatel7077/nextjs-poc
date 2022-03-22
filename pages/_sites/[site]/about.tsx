@@ -21,7 +21,7 @@ export async function getStaticProps({ params: { site } }: any) {
       site,
       time: Date.now(),
     },
-    revalidate: 5,
+    revalidate: 10,
   };
 }
 
